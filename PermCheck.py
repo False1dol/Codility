@@ -1,6 +1,7 @@
 # you can write to stdout for debugging purposes, e.g.
 # print("this is a debug message")
 
+#Solution 1:
 def solution(A):
    
     if not len(A):
@@ -20,4 +21,20 @@ def solution(A):
         if num not in dict:
             return 0
 
+    return 1
+
+#Solution 2
+
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A):
+    # write your code in Python 3.6
+    if not A:
+        return 0
+    seen = set()
+    for i in A:
+        if i < 1 or i > len(A) or i in seen:
+            return 0
+        seen.add(i)
     return 1
